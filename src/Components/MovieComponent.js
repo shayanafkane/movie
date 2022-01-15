@@ -32,13 +32,14 @@ const Movieinfo = styled.span`
     text-transform : capitalize
 `;
 const MovieComponent = (props) => {
+    const {Title , Year , imdbID ,Type , Poster} = props.movie;
     return (
         <MovieContainer>
-            <CoverImage src="https://www.amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg" />
-            <MovieName>Guardians of the Galaxy Vol. 2</MovieName>
+            <CoverImage src={Poster} />
+            <MovieName>{Title}</MovieName>
             <InfoColumn>
-                <Movieinfo>Year : 2012</Movieinfo>
-                <Movieinfo>Type : Movie</Movieinfo>
+                <Movieinfo>Year : {Year}</Movieinfo>
+                <Movieinfo>Type : {Type}</Movieinfo>
 
             </InfoColumn>
         </MovieContainer>

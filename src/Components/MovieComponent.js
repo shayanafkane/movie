@@ -34,9 +34,9 @@ const Movieinfo = styled.span`
     text-transform : capitalize
 `;
 const MovieComponent = (props) => {
-    const {Title , Year , imdbID ,Type , Poster} = props.movie;
+    const { Title, Year, imdbID, Type, Poster } = props.movie;
     return (
-        <MovieContainer onClick={()=> props.onMovieSelect(imdbID)}>
+        <MovieContainer onClick={() => props.onMovieSelect(imdbID) + window.scrollTo(0, 0)}>
             <CoverImage src={Poster} />
             <MovieName>{Title}</MovieName>
             <InfoColumn>

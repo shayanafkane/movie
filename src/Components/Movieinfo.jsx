@@ -8,11 +8,20 @@ display : flex;
 flex-direction : row;
 padding : 20px 30px;
 justidy-content: center;
-border-bottom : 1px solid lightgray
+border-bottom : 1px solid lightgray;
+@media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 const CoverImage = styled.img`
 object-fit:cover;
-height : 352px
+height : 352px;
+    @media (max-width: 768px) {
+        height:100%;
+      }
+
+
+
 `
 const InfoColumn = styled.div`
 display : flex;
@@ -97,7 +106,7 @@ const MovieInfoComponent = (props) => {
                 </MovieInfo>
 
             </InfoColumn>
-    
+
         </Container>
     )
 }

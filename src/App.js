@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import MovieComponent from "./Components/MovieComponent";
 const Container = styled.div`
   display : flex;
   flex-direction: column;
@@ -50,7 +50,13 @@ font-weight : bold ;
 border : none ;
 outline : none ;
 margin-left : 15px;
-
+`;
+const MovieListContainer = styled.div`
+display : flex; 
+flex-direction : row ;
+flex-wrap : wrap;
+padding : 30px;
+justify-content: space-evenly;
 `;
 function App() {
   return (
@@ -68,6 +74,12 @@ function App() {
           <SearchInput placeholder="Search Movie" />
         </SearchBox>
       </Header>
+      <MovieListContainer>
+        <MovieComponent />
+        <MovieComponent />
+        <MovieComponent />
+        <MovieComponent />
+      </MovieListContainer>
     </Container>
   );
 }
